@@ -1,6 +1,28 @@
 const numberDisplay = document.getElementById('number-display');
 const generateBtn = document.getElementById('generate-btn');
+const themeToggle = document.getElementById('theme-toggle');
 
+// Theme Management
+const setTheme = (theme) => {
+    document.documentElement.setAttribute('data-theme', theme);
+    localStorage.setItem('lotto-theme', theme);
+    const icon = theme === 'dark' ? '☀️' : '🌙';
+    themeToggle.querySelector('.icon').textContent = icon;
+};
+
+const toggleTheme = () => {
+    const currentTheme = document.documentElement.getAttribute('data-theme');
+    const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+    setTheme(newTheme);
+};
+
+// Initialize Theme
+const savedTheme = localStorage.getItem('lotto-theme') || 'light';
+setTheme(savedTheme);
+
+themeToggle.addEventListener('click', toggleTheme);
+
+// Lotto Logic
 const getNumberColor = (number) => {
     if (number <= 10) return '#fbc400'; // Yellow
     if (number <= 20) return '#69c8f2'; // Blue
