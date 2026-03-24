@@ -8,6 +8,9 @@
     --btn-text: #fff;
     --toggle-btn-bg: #f0f2f5;
     --toggle-btn-hover: #e4e6eb;
+    --input-bg: #fff;
+    --input-border: #ddd;
+    --hr-color: #eee;
 }
 
 [data-theme="dark"] {
@@ -20,6 +23,9 @@
     --btn-text: #fff;
     --toggle-btn-bg: #3a3b3c;
     --toggle-btn-hover: #4e4f50;
+    --input-bg: #3a3b3c;
+    --input-border: #4e4f50;
+    --hr-color: #3e4042;
 }
 
 body {
@@ -29,7 +35,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh;
     margin: 0;
     transition: background-color 0.3s, color 0.3s;
 }
@@ -44,6 +50,7 @@ body {
     transition: background-color 0.3s, box-shadow 0.3s;
     width: 90%;
     max-width: 500px;
+    margin: 20px;
 }
 
 .theme-toggle {
@@ -126,6 +133,72 @@ h1 {
 
 .generate-btn:active {
     transform: scale(0.95);
+}
+
+.partnership-section {
+    margin-top: 40px;
+    text-align: left;
+}
+
+.partnership-section hr {
+    border: 0;
+    border-top: 1px solid var(--hr-color);
+    margin-bottom: 30px;
+}
+
+.partnership-section h3 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--input-border);
+    border-radius: 8px;
+    background-color: var(--input-bg);
+    color: var(--text-color);
+    font-size: 1rem;
+    box-sizing: border-box;
+    transition: border-color 0.3s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--btn-bg);
+}
+
+.form-group textarea {
+    height: 100px;
+    resize: none;
+}
+
+.submit-btn {
+    background-color: var(--btn-bg);
+    color: var(--btn-text);
+    border: none;
+    padding: 12px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.submit-btn:hover {
+    background-color: var(--btn-hover);
+}
+
+.submit-btn:active {
+    transform: scale(0.98);
 }
 
 @keyframes pop-in {

@@ -8,6 +8,7 @@ A modern, responsive web application that generates random lotto numbers (1-45) 
 - **Sorted Display:** Numbers are displayed in ascending order.
 - **Color Coding:** Traditional lotto ball colors based on number ranges (1-10: Yellow, 11-20: Blue, 21-30: Red, 31-40: Gray, 41-45: Green).
 - **Theme Switching:** Toggle between Dark and Light modes.
+- **Partnership Inquiry:** A contact form powered by Formspree for business inquiries.
 - **Persistence:** Remembers the user's theme preference using `localStorage`.
 - **Responsive Design:** Optimized for both desktop and mobile devices.
 
@@ -39,3 +40,8 @@ A modern, responsive web application that generates random lotto numbers (1-45) 
 3. Implement `[data-theme="dark"]` overrides.
 4. Add theme toggle logic and `localStorage` persistence to `main.js`.
 5. Deploy changes to GitHub.
+
+### Phase 3: Partnership Inquiry (Completed)
+1. Add Formspree integration to `index.html`.
+2. Style the contact form to match Dark/Light themes in `style.css`.
+3. Update `blueprint.md` and deploy to GitHub.
