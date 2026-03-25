@@ -45,3 +45,9 @@ A modern, responsive web application that generates random lotto numbers (1-45) 
 1. Add Formspree integration to `index.html`.
 2. Style the contact form to match Dark/Light themes in `style.css`.
 3. Update `blueprint.md` and deploy to GitHub.
+
+### Phase 4: Disqus Integration (Completed)
+1. Add the Disqus thread container to `index.html`.
+2. Insert the Disqus embed script at the bottom of the body.
+3. Apply styling to the Disqus container in `style.css` for better integration.
+4. Update `blueprint.md` to reflect completion.
