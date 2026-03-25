@@ -1,53 +1,48 @@
-# Lotto Number Generator Blueprint
+# Animal Face Test Blueprint (Dog vs. Cat)
 
 ## Overview
-A modern, responsive web application that generates random lotto numbers (1-45) and displays them with a beautiful UI. It includes features like theme switching (Dark/Light mode) and persistent user preferences.
+A modern, AI-powered web application that analyzes user photos to determine if they have "Dog-like" or "Cat-like" facial features using a Google Teachable Machine model.
 
 ## Features
-- **Random Number Generation:** Generates 6 unique numbers from 1 to 45.
-- **Sorted Display:** Numbers are displayed in ascending order.
-- **Color Coding:** Traditional lotto ball colors based on number ranges (1-10: Yellow, 11-20: Blue, 21-30: Red, 31-40: Gray, 41-45: Green).
-- **Theme Switching:** Toggle between Dark and Light modes.
-- **Partnership Inquiry:** A contact form powered by Formspree for business inquiries.
-- **Persistence:** Remembers the user's theme preference using `localStorage`.
-- **Responsive Design:** Optimized for both desktop and mobile devices.
+- **AI Image Analysis:** Uses a pre-trained model (from Teachable Machine) to classify images.
+- **Image Upload & Drag-and-Drop:** Intuitive file input with a preview of the uploaded image.
+- **Real-time Results:** Displays the probability (percentage) of each animal feature.
+- **Visual Feedback:** Dynamic progress bars and expressive results (e.g., "You are more like a Dog!").
+- **Theme Support:** Fully compatible with Dark and Light modes.
+- **Partnership & Comments:** Retains the contact form and Disqus integration.
 
 ## Design
-- **Typography:** Expressive 'Helvetica Neue' font.
+- **Typography:** Expressive 'Helvetica Neue' with bold headers for results.
 - **Visual Effects:**
-    - Subtle pop-in animations for number balls.
-    - Deep, multi-layered shadows for a lifted card effect.
-    - Glassmorphism-inspired container transitions.
+    - Glassmorphism containers for a premium feel.
+    - Soft, deep shadows and glowing progress bars for results.
+    - Smooth transitions between upload and result states.
 - **Interactivity:**
-    - Animated theme toggle button.
-    - Hover and active states for the generation button.
+    - Interactive upload area with hover effects.
+    - Animated progress bars for AI classification results.
 
 ## Technical Details
-- **Architecture:** Framework-less (Vanilla HTML, CSS, JavaScript).
-- **Theming:** Implemented using CSS Variables (`:root`) and the `data-theme` attribute.
-- **Performance:** Optimized for speed and minimal asset usage.
-- **Deployment:** Integrated with GitHub for continuous delivery.
+- **Libraries:**
+    - TensorFlow.js (`@tensorflow/tfjs`)
+    - Teachable Machine Image Library (`@teachablemachine/image`)
+- **Model URL:** `https://teachablemachine.withgoogle.com/models/u1XRiEMcN/`
+- **Architecture:** Vanilla JS with ES Modules.
 
 ## Plan & Steps
-### Phase 1: Initial Implementation (Completed)
-1. Setup basic HTML/CSS/JS structure.
-2. Implement lotto logic and color coding.
-3. Apply modern aesthetics and animations.
+### Phase 1-4: Foundation & Legacy Features (Completed)
+1. Setup basic project structure, theme support, partnership form, and Disqus integration.
 
-### Phase 2: Theme Support (Completed)
-1. Add theme toggle button to `index.html`.
-2. Refactor `style.css` to use CSS Variables for all colors.
-3. Implement `[data-theme="dark"]` overrides.
-4. Add theme toggle logic and `localStorage` persistence to `main.js`.
-5. Deploy changes to GitHub.
+### Phase 5: Animal Face Test UI (Completed)
+1. Replace Lotto UI with a dedicated "Animal Face Test" upload container in `index.html`.
+2. Add necessary scripts for TensorFlow.js and Teachable Machine in `index.html`.
+3. Style the upload area and result displays in `style.css`.
 
-### Phase 3: Partnership Inquiry (Completed)
-1. Add Formspree integration to `index.html`.
-2. Style the contact form to match Dark/Light themes in `style.css`.
-3. Update `blueprint.md` and deploy to GitHub.
+### Phase 6: AI Integration (Completed)
+1. Implement model loading logic in `main.js`.
+2. Add image processing and prediction functions.
+3. Display results dynamically with animated progress bars.
 
-### Phase 4: Disqus Integration (Completed)
-1. Add the Disqus thread container to `index.html`.
-2. Insert the Disqus embed script at the bottom of the body.
-3. Apply styling to the Disqus container in `style.css` for better integration.
-4. Update `blueprint.md` to reflect completion.
+### Phase 7: Polish & Refactoring (Completed)
+1. Ensure the theme toggle works seamlessly with the new UI.
+2. Clean up old Lotto-related code.
+3. Final verification and deployment.

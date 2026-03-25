@@ -11,10 +11,28 @@
         <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode">
             <span class="icon">🌓</span>
         </button>
-        <h1>Lotto Number Generator</h1>
-        <div class="lotto-machine">
-            <div id="number-display" class="number-display"></div>
-            <button id="generate-btn" class="generate-btn">Generate Numbers</button>
+        <h1>Animal Face Test</h1>
+        <p class="subtitle">Are you more like a Dog or a Cat?</p>
+        
+        <div class="test-container">
+            <div id="upload-area" class="upload-area">
+                <input type="file" id="image-upload" accept="image/*" hidden>
+                <div class="upload-content">
+                    <span class="upload-icon">📸</span>
+                    <p>Click or drag your photo here</p>
+                </div>
+            </div>
+            
+            <div id="preview-container" class="preview-container" style="display: none;">
+                <img id="image-preview" src="" alt="Your face">
+                <div id="loading-spinner" class="spinner" style="display: none;"></div>
+            </div>
+
+            <div id="result-container" class="result-container" style="display: none;">
+                <h2 id="result-title">Analyzing...</h2>
+                <div id="label-container" class="label-container"></div>
+                <button id="retry-btn" class="retry-btn">Try Again</button>
+            </div>
         </div>
 
         <div class="partnership-section">
@@ -55,6 +73,8 @@
         })();
     </script>
     <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest/dist/tf.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@latest/dist/teachablemachine-image.min.js"></script>
     <script src="main.js"></script>
 </body>
 </html>
